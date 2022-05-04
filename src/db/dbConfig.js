@@ -24,6 +24,4 @@ sequelize.authenticate().then(() => {
     console.log(`err`, err);
 });
 
-const db = {};
-db.Sequelize = Sequelize;
-db.sequelize = sequelize;
+module.exports = sequelize;

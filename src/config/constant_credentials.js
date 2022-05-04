@@ -6,11 +6,17 @@ const credentials = {
     DB_USER: process.env.NODE_ENV == "QA" ? process.env.DB_USER_QA : process.env.DB_USER || 'postgres',
     DB_PASSWORD: process.env.NODE_ENV == "QA" ? process.env.DB_PASSWORD_QA : process.env.DB_PASSWORD || '12345678',
     DB_NAME: process.env.NODE_ENV == "QA" ? process.env.DB_NAME_QA : process.env.DB_NAME || 'CHCB',
+    SECRET_TOKEN: process.env.NODE_ENV == "QA" ? process.env.SECRET_TOKEN_QA : process.env.SECRET_TOKEN || '_QNxOvsAiEWoMnSGuxs66uFDjIRiZSfdmQ',
     POOL: {
         MAX: 10,
         MIN: 3,
         ACQUIRE: 3000,
         IDLE: 100000
+    },
+    StatusCodes: {
+        OK: 200,
+        INTERNAL_SERVER_ERROR: 500,
+        UNAUTHORIZED: 401
     }
 };
 // console.log(`credentials`, credentials);
