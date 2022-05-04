@@ -11,7 +11,7 @@ exports.successResponse = async(req, res, data, message, status = constant.Statu
     });
 };
 
-exports.errorResponse = (res, error, message, status = StatusCodes.INTERNAL_SERVER_ERROR) => {
+exports.errorResponse = (res, error, message, status = constant.StatusCodes.UNAUTHORIZED) => {
 
     return res.status(status).json({
         success: false,
