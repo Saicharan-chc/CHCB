@@ -102,6 +102,7 @@ let UserServices = {
             role_id: roleFind.role_id,
             role_master_id: roleMasterFind.role_master_id
         }
+        console.log(constant.SECRET_TOKEN);
         const token = jwt.sign(tokenData, constant.SECRET_TOKEN, {
             expiresIn: 60 * 60 * 12
         });
